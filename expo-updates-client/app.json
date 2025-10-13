@@ -1,11 +1,14 @@
 {
   "expo": {
-    "name": "expo-updates-client",
-    "slug": "expo-updates-client",
+    "name": "ධර්මය",
+    "slug": "dharma",
     "owner": "anonymous",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
+    "scheme": "dharma",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -27,16 +30,19 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.test.expo-updates-client"
+      "bundleIdentifier": "dev.sdmx.dharma"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#F5F5F5"
       },
-      "package": "com.test.expoupdatesclient"
+      "edgeToEdgeEnabled": true,
+      "package": "dev.sdmx.dharma"
     },
     "web": {
+      "bundler": "metro",
+      "output": "static",
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
