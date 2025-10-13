@@ -38,27 +38,55 @@ Note: The app is configured to load updates from the server running at http://lo
 1. Update `.env.local` in the server.
 2. Update `updates.url` in `app.json` and re-run the build steps below.
 
+### Install Dependencies
+
+```sh
+yarn
+```
+
+### Regenerate native project code
+
+```sh
+npx expo prebuild --clean
+```
+
 ### Create a "release" app
 
 The example Expo project configured for the server is located in **/expo-updates-client**.
 
 #### iOS
 
-Run `yarn` and `yarn ios --configuration Release`.
+```sh
+yarn ios --configuration Release
+```
 
 #### Android
 
-Run `yarn` and then run `yarn android --variant release`.
+```sh
+yarn android --variant release
+```
 
 ### Make a change
 
 Let's make a change to the project in /expo-updates-client that we'll want to push as an over-the-air update from our custom server to the "release" app. `cd` in to **/expo-updates-client**, then make a change in **App.js**.
 
-Once you've made a change you're happy with, inside of **/expo-updates-server**, run `yarn expo-publish`. Under the hood, this script runs `npx expo export` in the client, copies the exported app to the server, and then copies the Expo config to the server as well.
+Once you've made a change you're happy with, inside of **/expo-updates-server**, run:
+
+```sh
+yarn expo-publish
+```
+
+Under the hood, this script runs `npx expo export` in the client, copies the exported app to the server, and then copies the Expo config to the server as well.
 
 ### Send an update
 
-Now we're ready to run the update server. Run `yarn dev` in the server folder of this repo to start the server.
+Now we're ready to run the update server. Run:
+
+```sh
+yarn dev
+```
+
+in the **server folder** of this repo to start the server.
 
 In the simulator running the "release" version of the app, force close the app and re-open it. It should make a request to /api/manifest, then requests to /api/assets. After the app loads, it should show any changes you made locally.
 
