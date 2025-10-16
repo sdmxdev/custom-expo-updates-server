@@ -35,3 +35,11 @@ yarn-error.log*
 
 # updates
 /updates/*
+!/updates/1/
+!/updates/test/
+!/updates/testrollback/
+/updates/1/*
+!/updates/1/1666304169/
+!/updates/1/1666629107/
+!/updates/1/1666629141/
+!/updates/1/1674170951/
