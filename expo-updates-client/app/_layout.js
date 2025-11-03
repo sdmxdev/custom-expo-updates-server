@@ -7,7 +7,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app 3!</Text>
       <Text>{Constants.expoConfig.name}</Text>
-      <Image source={require('./assets/favicon.png')} />
+      <Image source={require('../assets/favicon.png')} />
       <StatusBar style="auto" />
     </View>
   );
